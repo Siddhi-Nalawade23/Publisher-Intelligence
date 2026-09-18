@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #12224d;
+  color: #fff;
+  padding: 0 24px;
+  height: 50px;
+  flex-shrink: 0;
+  font-family: Calibri, 'Segoe UI', system-ui, sans-serif;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.header-left .product-name {
+  font-weight: 600;
+}
+
+.header-left .divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header-left .subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.straw-man-badge {
+  background: rgba(245, 132, 38, 0.18);
+  color: #FBB871;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  border: 1px solid rgba(245, 132, 38, 0.35);
+
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #3a4a7a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .straw-man-badge {
+    text-wrap: inherit;
+    padding: 3px 12px;
+  }
+  .avatar {
+    width: 35px;
+    height: 35px;
+    font-size:10px ;
+  }
+}
