@@ -1,6 +1,7 @@
 import type { NavItem } from "../types/types";
 import NavIcon from "./Navicons";
 import "./Sidebar.css"
+import { useState } from "react";
 
 const NAV_ITEMS: NavItem[] = [
   { id: "field", title: "Field", subtitle: "Reps & sales leaders", icon: "field" },
@@ -8,13 +9,109 @@ const NAV_ITEMS: NavItem[] = [
   { id: "business", title: "Business", subtitle: "CFO, finance, pricing", icon: "business" },
   { id: "editorial", title: "Editorial", subtitle: "Editorial & content strategy", icon: "editorial" },
 ];
-
+interface FilterField {
+  label: string;
+  options: string[];
+  defaultValue: string;
+}
+const SCOPE_FILTERS: Record<string, FilterField[]> = {
+  field: [
+    {
+      label: "INSTITUTION",
+      options: ["All institutions", "Iowa State", "UC Davis", "Ohio State", "Georgia State", "Arizona State"],
+      defaultValue: "All institutions",
+    },
+    {
+      label: "SUBJECT / DISCIPLINE",
+      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      defaultValue: "All disciplines",
+    },
+    {
+      label: "TERM",
+      options: ["Fall 2026 in progress", "Spring 2026", "Fall 2025"],
+      defaultValue: "Fall 2026 in progress",
+    },
+    {
+      label: "COURSE LEVEL",
+      options: ["All courses", "Intro / gateway", "Upper division"],
+      defaultValue: "All courses",
+    },
+  ],
+  strategic: [
+    {
+      label: "INSTITUTION TYPE",
+      options: ["All institution types", "R1 universities", "Community colleges", "Regional 4-year"],
+      defaultValue: "All institution types",
+    },
+    {
+      label: "SUBJECT / DISCIPLINE",
+      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      defaultValue: "All disciplines",
+    },
+    {
+      label: "TERM",
+      options: ["Fall 2026 in progress", "Spring 2026", "Fall 2025"],
+      defaultValue: "Fall 2026 in progress",
+    },
+    {
+      label: "COURSE LEVEL",
+      options: ["All courses", "Intro / gateway", "Upper division"],
+      defaultValue: "All courses",
+    },
+  ],
+  business: [
+    {
+      label: "PUBLISHER",
+      options: ["Publisher A", "Publisher B"],
+      defaultValue: "Publisher A",
+    },
+    {
+      label: "SUBJECT / DISCIPLINE",
+      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      defaultValue: "All disciplines",
+    },
+    {
+      label: "TERM",
+      options: ["Fall 2026 in progress", "Spring 2026", "Fall 2025"],
+      defaultValue: "Fall 2026 in progress",
+    },
+    {
+      label: "COURSE LEVEL",
+      options: ["All courses", "Intro / gateway", "Upper division"],
+      defaultValue: "All courses",
+    },
+  ],
+  editorial: [
+     {
+      label: "PUBLISHER",
+      options: ["Publisher A", "Publisher B"],
+      defaultValue: "Publisher A",
+    },
+    {
+      label: "SUBJECT / DISCIPLINE",
+      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      defaultValue: "All disciplines",
+    },
+    {
+      label: "TERM",
+      options: ["Fall 2026 in progress", "Spring 2026", "Fall 2025"],
+      defaultValue: "Fall 2026 in progress",
+    },
+    {
+      label: "COURSE LEVEL",
+      options: ["All courses", "Intro / gateway", "Upper division"],
+      defaultValue: "All courses",
+    },
+  ],
+};
 interface SidebarProps {
   activeId: string;
   onSelect: (id: string) => void;
 }
 
 export default function Sidebar({ activeId, onSelect }: SidebarProps) {
+  const currentFilters = SCOPE_FILTERS[activeId] ?? [];
+
   return (
     <aside className="sidebar">
       <div className="sidebar-section">
@@ -42,49 +139,16 @@ export default function Sidebar({ activeId, onSelect }: SidebarProps) {
       <div className="sidebar-section">
         <div className="sidebar-label">SCOPE</div>
       </div>
-
-      <div className="field-group">
-        <label>INSTITUTION</label>
-        <select className="field-select" defaultValue="All institutions">
-          <option>All institutions</option>
-          <option>Iowa State</option>
-          <option>UC Davis</option>
-          <option>Ohio State</option>
-          <option>Georgia State</option>
-          <option>Arizona State</option>
-        </select>
-      </div>
-
-      <div className="field-group">
-        <label>SUBJECT / DISCIPLINE</label>
-        <select className="field-select" defaultValue="All disciplines">
-          <option>All disciplines</option>
-          <option>Economics</option>
-          <option>Biology</option>
-          <option>Nursing</option>
-          <option>Psychology</option>
-        </select>
-      </div>
-
-      <div className="field-group">
-        <label>TERM</label>
-        <select className="field-select" defaultValue="Fall 2026 in progress">
-          <option>Fall 2026 in progress</option>
-          <option>Spring 2026</option>
-          <option>Fall 2025</option>
-
-        </select>
-      </div>
-
-      <div className="field-group">
-        <label>COURSE LEVEL</label>
-        <select className="field-select" defaultValue="All courses">
-          <option>All courses</option>
-          <option>Intro / gateway</option>
-          <option>Upper division</option>
-
-        </select>
-      </div>
+      {currentFilters.map((filter) => (
+        <div className="field-group" key={filter.label}>
+          <label>{filter.label}</label>
+          <select className="field-select" defaultValue={filter.defaultValue}>
+            {filter.options.map((opt) => (
+              <option key={opt}>{opt}</option>
+            ))}
+          </select>
+        </div>
+      ))}
 
       <div className="sidebar-footer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>

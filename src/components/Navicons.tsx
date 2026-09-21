@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
 import type { NavItem } from "../types/types";
 import "./Navicons.css"
+import "tailwindcss";
 const icons: Record<NavItem["icon"], ReactElement> = {
   field: (
     <svg width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
