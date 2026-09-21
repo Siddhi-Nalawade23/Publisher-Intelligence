@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #12224d;
-  color: #fff;
+  background: var(--navy);
+  color: var(--bg-sidebar);
   padding: 0 24px;
   height: 50px;
   flex-shrink: 0;
@@ -69,5 +69,8 @@
     width: 35px;
     height: 35px;
     font-size:10px ;
+  }
+  .header-left .subtitle{
+   font-size: 12px;
   }
 }
