@@ -14,7 +14,7 @@
   --navy: #1B2A4A;
   --cyan: #009EC2;
   --orange: #F58426;
-   --surface-1: #ECEEF2;
+  --surface-1: #ECEEF2;
   --surface-2: #ffffff;
   --text-primary: #111827;
   --text-secondary: #4B5563;
@@ -28,10 +28,7 @@
   --oer: #6EE7C0;
   --oer-text: #065F46;
   --paid-text: #374151;
-}
-* {
-  box-sizing: border-box;
-
+  --risk-text: #991B1B;
 }
 *,
 *::before,
@@ -40,8 +37,8 @@
   margin: 0;
   padding: 0;
 }
+
 html,
-body,
 #root {
   margin: 0;
   padding: 0;
@@ -54,7 +51,7 @@ body {
   background: var(--bg-app);
 }
 
-.body {
+.main-content {
   display: flex;
   flex: 1;
   min-height: 0;
