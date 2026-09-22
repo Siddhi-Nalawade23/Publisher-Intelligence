@@ -80,3 +80,16 @@ body {
   border-radius: 10px;
   background: #fff;
 }
+@media (max-width: 860px) {
+    .main {
+        padding: 22px 18px 48px;
+    }
+       .main-content {
+        flex-direction: column;   
+    }
+      .main {
+        padding: 22px 18px 48px;
+        overflow-y: visible;
+    }
+   
+}
