@@ -17,7 +17,7 @@ function App() {
         userInitials="GB"
       />
 
-      <div className="body">
+      <div className="main-content">
         <Sidebar activeId={activeNav} onSelect={setActiveNav} />
 
         <main className="main">
