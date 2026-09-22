@@ -39,7 +39,7 @@ export const attritionData: AttritionEntry[] = [
   {
     label: "Biology",
     lost: 24,
-    statusTag: "Sections shrinking",
+    statusTag: "Open/OER pressure",
     segments: [
       { key: "comp", value: 41, colorClass: "seg-comp" },
       { key: "cyan", value: 12, colorClass: "seg-cyan" },
@@ -51,7 +51,7 @@ export const attritionData: AttritionEntry[] = [
   {
     label: "Psychology",
     lost: 24,
-    statusTag: "Sections shrinking",
+    statusTag: "26% unexplained",
     segments: [
       { key: "comp", value: 38, colorClass: "seg-comp" },
       { key: "cyan", value: 22, colorClass: "seg-cyan" },
@@ -63,7 +63,7 @@ export const attritionData: AttritionEntry[] = [
   {
     label: "Nursing",
     lost: 24,
-    statusTag: "Sections shrinking",
+    statusTag: "Programme changes",
     segments: [
       { key: "comp", value: 27, colorClass: "seg-comp" },
       { key: "cyan", value: 33, colorClass: "seg-cyan" },
