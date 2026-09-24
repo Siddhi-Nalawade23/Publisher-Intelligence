@@ -17,11 +17,8 @@ function App() {
         badgeLabel="Straw man v0.1 — sample data"
         userInitials="GB"
       />
-
       <div className="main-content">
         <Sidebar />
-
-
         <main className="main">
           <Routes>
             <Route path="/" element={<Field />} />
