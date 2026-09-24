@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { Route, Routes } from 'react-router-dom';
 import Field from './pages/Field';
+import Strategic from './pages/Strategic';
 
 function App() {
   const [activeNav, setActiveNav] = useState("field");
@@ -18,12 +19,13 @@ function App() {
       />
 
       <div className="main-content">
-        <Sidebar activeId={activeNav} onSelect={setActiveNav} />
+        <Sidebar />
+
 
         <main className="main">
           <Routes>
             <Route path="/" element={<Field />} />
-
+            <Route path="/strategic" element={<Strategic />} />
           </Routes>
         </main>
       </div>

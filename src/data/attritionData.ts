@@ -8,6 +8,7 @@ export interface AttritionEntry {
   label: string;
   lost: number;
   statusTag: string;
+  tagVariant:string;
   segments: Segment[];
 }
 
@@ -16,6 +17,7 @@ export const attritionData: AttritionEntry[] = [
     label: "All disciplines",
     lost: 91,
     statusTag: "20% unexplained",
+    tagVariant:"unexplained",
     segments: [
       { key: "comp", value: 34, colorClass: "seg-comp" },
       { key: "cyan", value: 19, colorClass: "seg-cyan" },
@@ -28,6 +30,7 @@ export const attritionData: AttritionEntry[] = [
     label: "Economics",
     lost: 24,
     statusTag: "Sections shrinking",
+    tagVariant:"shrinking",
     segments: [
       { key: "comp", value: 29, colorClass: "seg-comp" },
       { key: "cyan", value: 14, colorClass: "seg-cyan" },
@@ -40,6 +43,7 @@ export const attritionData: AttritionEntry[] = [
     label: "Biology",
     lost: 24,
     statusTag: "Open/OER pressure",
+    tagVariant:"pressure",
     segments: [
       { key: "comp", value: 41, colorClass: "seg-comp" },
       { key: "cyan", value: 12, colorClass: "seg-cyan" },
@@ -52,6 +56,7 @@ export const attritionData: AttritionEntry[] = [
     label: "Psychology",
     lost: 24,
     statusTag: "26% unexplained",
+    tagVariant:"unexplained",
     segments: [
       { key: "comp", value: 38, colorClass: "seg-comp" },
       { key: "cyan", value: 22, colorClass: "seg-cyan" },
@@ -64,6 +69,7 @@ export const attritionData: AttritionEntry[] = [
     label: "Nursing",
     lost: 24,
     statusTag: "Programme changes",
+    tagVariant:"changes",
     segments: [
       { key: "comp", value: 27, colorClass: "seg-comp" },
       { key: "cyan", value: 33, colorClass: "seg-cyan" },
