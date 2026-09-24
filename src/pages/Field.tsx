@@ -36,19 +36,23 @@ function Field() {
 
          <div className="card">
             <div className="card-header">
-               <div className="card-title">What happened to my adoption?</div>
-               <div className="card-meta">Attribution for the 91 adoptions lost this term. Competing publishers are aggregated anonymously — no competitor names are surfaced.</div>
+               <div>
+                  <div className="card-title">What happened to my adoption?</div>
+                  <div className="card-meta">Attribution for the 91 adoptions lost this term. Competing publishers are aggregated anonymously — no competitor names are surfaced.</div>
+               </div>
                <span className="fresh lag">Updated weekly</span>
             </div>
             <div className="health-note warn">
                <span className="health-note-icon">⚠</span>
-               <div style={{ fontWeight: 700, marginBottom: 4, fontSize: 13 }}>The amber slice is the gap we're trying to close.</div>
-               <div>Today a publisher who loses a course can't tell whether they were displaced by a
-                  competing title, whether the course stopped running, or whether the department simply cut sections.
-                  Those are three completely different conversations for a rep to have. Driving </div>
+               <div>
+                  <div style={{ fontWeight: "700", marginBottom: "4px", fontSize: "13px" }}>The amber slice is the gap we're trying to close.</div>
+                  <div>Today a publisher who loses a course can't tell whether they were displaced by a
+                     competing title, whether the course stopped running, or whether the department simply cut sections.
+                     Those are three completely different conversations for a rep to have. Driving </div>
 
-               <strong>unknown</strong>
-               toward zero is the single clearest opportunity in this bucket.
+                  <strong>unknown</strong>
+                  toward zero is the single clearest opportunity in this bucket.
+               </div>
             </div>
             <div className="legend" style={{ marginBottom: "12px" }}>
                <div className="leg">
@@ -195,10 +199,10 @@ function Field() {
             <div className="asks-label">
                QUESTIONS THIS BUCKET ANSWERS</div>
             <div className="asks">
-               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Which adoptions do I defend in the next three weeks?</div>
-               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Did I lose the course, or did the course lose sections?</div>
-               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Where is my rep walking in blind this week?</div>
-               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>Which wins should the region be repeating?</div>
+               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7" /></svg>Which adoptions do I defend in the next three weeks?</div>
+               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7" /></svg>Did I lose the course, or did the course lose sections?</div>
+               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7" /></svg>Where is my rep walking in blind this week?</div>
+               <div className="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7" /></svg>Which wins should the region be repeating?</div>
             </div>
          </div>
       </div>

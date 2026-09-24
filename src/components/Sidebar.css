@@ -1,11 +1,11 @@
 .sidebar {
   width: 230px;
   background: var(--surface-2);
-  border-right: 1px solid var( --border);
+  border-right: 1px solid var(--border);
   padding: 15px 5px;
   overflow-y: auto;
   flex-shrink: 0;
-  font-family:Calibri, 'Segoe UI', system-ui, sans-serif;
+  font-family: Calibri, 'Segoe UI', system-ui, sans-serif;
   color: var(--text-primary);
 }
 
@@ -107,14 +107,16 @@
   cursor: pointer;
   margin-top: 10px;
 }
-@media (max-width: 860px) {
-    .sidebar {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        width: 100%;
-    }
-    .field-select{
-      padding:4px 5px ;
-    }
-}
 
+@media (max-width: 860px) {
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    max-height: 100vh;
+    width: 100%;
+  }
+
+  .field-select {
+    padding: 4px 5px;
+  }
+}
