@@ -2,7 +2,6 @@
   --navy: #12224d;
   --accent-purple: #6d5fd8;
   --accent-purple-bg: #ece9fb;
-  --border: #e3e5ea;
   --surface-0: #F4F5F7;
   --surface-2: #ffffff;
   --text-primary: #1a1d29;
@@ -11,16 +10,11 @@
   --bg-sidebar: #ffffff;
   --badge-bg: #7a4a2e;
   --text-muted: #9CA3AF;
-  --navy: #1B2A4A;
   --cyan: #009EC2;
   --orange: #F58426;
   --surface-1: #ECEEF2;
   --surface-2: #ffffff;
-  --text-primary: #111827;
-  --text-secondary: #4B5563;
-  --text-muted: #9CA3AF;
   --border: rgba(0, 0, 0, 0.08);
-  --border-strong: rgba(0, 0, 0, 0.14);
   --radius: 6px;
   --you-healthy: #1B2A4A;
   --you-risk: #5B7BAF;
@@ -30,6 +24,7 @@
   --paid-text: #374151;
   --risk-text: #991B1B;
 }
+
 *,
 *::before,
 *::after {
@@ -80,16 +75,19 @@ body {
   border-radius: 10px;
   background: #fff;
 }
+
 @media (max-width: 860px) {
-    .main {
-        padding: 22px 18px 48px;
-    }
-       .main-content {
-        flex-direction: column;   
-    }
-      .main {
-        padding: 22px 18px 48px;
-        overflow-y: visible;
-    }
-   
+  .main {
+    padding: 22px 18px 48px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 22px 18px 48px;
+    overflow-y: visible;
+  }
+
 }

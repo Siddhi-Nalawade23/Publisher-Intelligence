@@ -1,10 +1,12 @@
 import "./Field.css"
 import { attritionData } from "../data/attritionData";
+import { useState } from "react";
 
 function Field() {
+   const [sortBy, setSortBy] = useState("enrollment");
    return (
-      <div>
-         <div className="">
+      <div className="field-page">
+         <div>
             <div className="page-header">
                <div className="page-eyebrow">Bucket 1 of 4 · Field intelligence</div>
                <div className="page-title">What's moving this term</div>
@@ -45,13 +47,13 @@ function Field() {
             <div className="health-note warn">
                <span className="health-note-icon">⚠</span>
                <div>
-                  <div style={{ fontWeight: "700", marginBottom: "4px", fontSize: "13px" }}>The amber slice is the gap we're trying to close.</div>
+                  <div>The amber slice is the gap we're trying to close.</div>
                   <div>Today a publisher who loses a course can't tell whether they were displaced by a
                      competing title, whether the course stopped running, or whether the department simply cut sections.
-                     Those are three completely different conversations for a rep to have. Driving </div>
-
-                  <strong>unknown</strong>
-                  toward zero is the single clearest opportunity in this bucket.
+                     Those are three completely different conversations for a rep to have. Driving
+                     <strong>unknown</strong>
+                     toward zero is the single clearest opportunity in this bucket.
+                  </div>
                </div>
             </div>
             <div className="legend" style={{ marginBottom: "12px" }}>
@@ -96,7 +98,7 @@ function Field() {
                         </div>
                      </div>
                      <div className="row-meta">
-                        <span className="row-lost">{row.lost} lost</span>
+                        <span>{row.lost} lost</span>
                         <span className="row-tag">{row.statusTag}</span>
                      </div>
                   </div>
@@ -116,10 +118,15 @@ function Field() {
 
                </div>
                <div className="controls">
-                  <select name="" id="">
-                     <option value="">Sort: enrollment at risk</option>
-                     <option value="">Sort: signal severity</option>
-                     <option value="">Sort: institution</option>
+                  <select
+                     id="watchlist-sort"
+                     name="watchlist-sort"
+                     value={sortBy}
+                     onChange={(e) => setSortBy(e.target.value)}
+                  >
+                     <option value="enrollment">Enrollment at risk</option>
+                     <option value="severity">Signal severity</option>
+                     <option value="institution">Institution</option>
                   </select>
                </div>
             </div>
@@ -143,51 +150,51 @@ function Field() {
                         <td className="course-name">ECON 201 — Principles of Microeconomics</td>
                         <td>Iowa State</td>
                         <td><span className="tag-pill subj-pill">Economics</span></td>
-                        <td className="num neg">7 → 5</td>
-                        <td className="num">1,240</td>
-                        <td className="num neg">−18%</td>
+                        <td className="neg">7 → 5</td>
+                        <td>1,240</td>
+                        <td className="neg">−18%</td>
                         <td><span className="tag-pill risk-hi">Sections cut</span></td>
-                        <td className="neu">2 days ago</td>
+                        <td>2 days ago</td>
                      </tr>
                      <tr>
                         <td className="course-name">BIOL 1110 — Introductory Biology</td>
                         <td>UC Davis</td>
                         <td><span className="tag-pill subj-pill">Biology</span></td>
-                        <td className="num neu">12</td>
-                        <td className="num">2,010</td>
-                        <td className="num neg">−9%</td>
+                        <td>12</td>
+                        <td>2,010</td>
+                        <td className="neg">−9%</td>
                         <td><span className="tag-pill risk-hi">Competing sample requested</span></td>
-                        <td className="neu">6 days ago</td>
+                        <td>6 days ago</td>
                      </tr>
                      <tr>
                         <td className="course-name">PSYC 100 — General Psychology</td>
                         <td>Ohio State</td>
                         <td><span className="tag-pill subj-pill">Psychology</span></td>
-                        <td className="num neu">18</td>
-                        <td className="num">3,450</td>
-                        <td className="num neu">−2%</td>
+                        <td>18</td>
+                        <td>3,450</td>
+                        <td>−2%</td>
                         <td><span className="tag-pill risk-med">Title dropped from syllabus</span></td>
-                        <td className="neu">11 days ago</td>
+                        <td>11 days ago</td>
                      </tr>
                      <tr>
                         <td className="course-name">NURS 210 — Pharmacology for Nursing</td>
                         <td>Georgia State</td>
                         <td><span className="tag-pill subj-pill">Nursing</span></td>
-                        <td className="num neu">6</td>
-                        <td className="num">720</td>
-                        <td className="num pos">+4%</td>
+                        <td>6</td>
+                        <td>720</td>
+                        <td>+4%</td>
                         <td><span className="tag-pill risk-med">Course coordinator changed</span></td>
-                        <td className="neu">3 days ago</td>
+                        <td>3 days ago</td>
                      </tr>
                      <tr>
                         <td className="course-name">ECON 202 — Principles of Macroeconomics</td>
                         <td>Arizona State</td>
                         <td><span className="tag-pill subj-pill">Economics</span></td>
-                        <td className="num neu">9</td>
-                        <td className="num">1,680</td>
-                        <td className="num neg">−22%</td>
+                        <td>9</td>
+                        <td>1,680</td>
+                        <td className="neg">−22%</td>
                         <td><span className="tag-pill risk-lo">Low engagement only</span></td>
-                        <td className="neu">Yesterday</td>
+                        <td>Yesterday</td>
                      </tr>
                   </tbody>
                </table>
