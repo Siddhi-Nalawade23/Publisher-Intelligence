@@ -5,7 +5,6 @@
   padding: 15px 5px;
   overflow-y: auto;
   flex-shrink: 0;
-  font-family: Calibri, 'Segoe UI', system-ui, sans-serif;
   color: var(--text-primary);
 }
 
