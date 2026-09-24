@@ -449,7 +449,25 @@ td {
     display: flex;
     align-items: center;
 }
+.row-tag--unexplained {
+    background: var(--risk-med-background);
+    color: var(--risk-med-text);
+}
 
+.row-tag--shrinking {
+    background: var(--risk-background);
+    color: var( --risk-text);
+}
+
+.row-tag--pressure {
+    background: var(--oer-background);
+    color: var(--oer-text);
+}
+
+.row-tag--changes {
+    background: var(--paid);
+    color: var(--text-secondary);
+}
 .RiskTable {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;

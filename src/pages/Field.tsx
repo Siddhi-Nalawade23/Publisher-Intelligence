@@ -97,10 +97,11 @@ function Field() {
                            ))}
                         </div>
                      </div>
-                     <div className="row-meta">
-                        <span>{row.lost} lost</span>
-                        <span className="row-tag">{row.statusTag}</span>
+                    <div className="row-meta">
+                        <span className="row-lost">{row.lost} lost</span>
+                        <span className={`row-tag row-tag--${row.tagVariant}`}>{row.statusTag}</span>
                      </div>
+
                   </div>
                ))}
             </div>

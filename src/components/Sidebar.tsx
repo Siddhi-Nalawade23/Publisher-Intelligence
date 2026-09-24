@@ -1,14 +1,25 @@
 import NavIcon from "./Navicons";
 import "./Sidebar.css";
 import { NAV_ITEMS, SCOPE_FILTERS } from "../data/sidebarDropdown";
+import { useNavigate, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   activeId: string;
   onSelect: (id: string) => void;
 }
 
-export default function Sidebar({ activeId, onSelect }: SidebarProps) {
+export default function Sidebar() {
+   const navigate = useNavigate();
+  const location = useLocation();
+
+  const activeId = location.pathname === "/" ? "field" : location.pathname.slice(1);
+
   const currentFilters = SCOPE_FILTERS[activeId] ?? [];
+
+  const handleSelect = (id: string) => {
+    navigate(id === "field" ? "/" : `/${id}`);
+  };
+
 
   return (
     <aside className="sidebar">
@@ -22,7 +33,7 @@ export default function Sidebar({ activeId, onSelect }: SidebarProps) {
             <button
               type="button"
               className={`nav-item ${item.id === activeId ? "active" : ""}`}
-              onClick={() => onSelect(item.id)}
+              onClick={() => handleSelect(item.id)}
               aria-current={item.id === activeId ? "page" : undefined}
             >
               <NavIcon name={item.icon} />
