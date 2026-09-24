@@ -78,14 +78,11 @@
 
 }
 
-@media (max-width: 1080px) {
+@container (max-width: 1080px) {
     .kpi-row {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-
 /* field para  */
 .card {
     background: var(--surface-2);
@@ -118,6 +115,7 @@
     max-width: 82ch;
     line-height: 1.5;
 }
+
 .health-note {
     display: flex;
     align-items: flex-start;
@@ -198,12 +196,6 @@
     flex-shrink: 0;
 }
 
-.chart-area {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
 .chart-row {
     display: flex;
     align-items: center;
@@ -228,11 +220,6 @@
 .bar-wrap {
     flex: 1;
     position: relative;
-}
-
-.row-meta-spacer {
-    width: 168px;
-    flex-shrink: 0;
 }
 
 .chart-area {
@@ -271,15 +258,6 @@
 .seg-unknown {
     background: repeating-linear-gradient(135deg, #FCD34D 0px, #FCD34D 3px, #FDE68A 3px, #FDE68A 6px);
     color: #92400E;
-}
-
-.chart-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 3px 6px;
-    border-radius: 7px;
-    transition: background 0.12s;
 }
 
 .bar-track {
@@ -334,6 +312,8 @@
 .fh-table .course-name {
     font-weight: 600;
     color: var(--navy);
+    font-size: 10px;
+    width: 250px;
 }
 
 td {
@@ -378,11 +358,6 @@ td {
     background: #FEE2E2;
 }
 
-.fh-table .course-name {
-    font-weight: 600;
-    color: var(--navy);
-}
-
 .fh-table tbody tr:hover td {
     background: var(--surface-0);
 }
@@ -417,11 +392,6 @@ td {
     border-radius: 10px;
     padding: 18px 24px 20px;
 
-}
-
-.fh-table .course-name {
-    font-size: 10px;
-    width: 250px;
 }
 
 .ask svg {
@@ -467,13 +437,19 @@ td {
 .controls select {
     font-size: 12px;
     padding: 5px 10px;
-    border: 1px solid var(--border-strong);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface-0);
     color: var(--text-primary);
     cursor: pointer;
     font-family: inherit;
 }
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
 .RiskTable {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -482,7 +458,10 @@ td {
 .RiskTable table {
     min-width: 750px;
 }
-@media (max-width: 600px) {
+.field-page {
+    container-type: inline-size;
+}
+@container (max-width: 600px) {
     .chart-area {
         overflow-x: auto;
     }
@@ -493,12 +472,14 @@ td {
 
     .asks {
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
         gap: 8px 24px;
     }
 
 }
+
 @media (max-width: 860px) {
+
     .fh-table td.course-name,
     .fh-table th:first-child {
         position: sticky;

@@ -18,16 +18,19 @@ export default function Sidebar({ activeId, onSelect }: SidebarProps) {
 
       <ul className="nav-list">
         {NAV_ITEMS.map((item) => (
-          <li
-            key={item.id}
-            className={`nav-item ${item.id === activeId ? "active" : ""}`}
-            onClick={() => onSelect(item.id)}
-          >
-            <NavIcon name={item.icon} />
-            <div>
-              <div className="nav-text-title">{item.title}</div>
-              <div className="nav-text-sub">{item.subtitle}</div>
-            </div>
+          <li key={item.id} className="nav-list-item">
+            <button
+              type="button"
+              className={`nav-item ${item.id === activeId ? "active" : ""}`}
+              onClick={() => onSelect(item.id)}
+              aria-current={item.id === activeId ? "page" : undefined}
+            >
+              <NavIcon name={item.icon} />
+              <span className="nav-text">
+                <span className="nav-text-title">{item.title}</span>
+                <span className="nav-text-sub">{item.subtitle}</span>
+              </span>
+            </button>
           </li>
         ))}
       </ul>
