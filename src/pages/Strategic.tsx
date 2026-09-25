@@ -153,23 +153,68 @@ function Strategic() {
                     <div className="chart-area">
                         <div className="chart-row">
                             <div className="row-label">Commercial</div>
-                            <div className="bar-wrap"><div className="bar-track"><div className="seg seg-you" style={{ width: "84%" }}><span>84%</span></div><div className="seg seg-none" style={{ width: "16%" }}></div></div></div>
+                            <div className="bar-wrap">
+                                <Progress.Root
+                                    className="bar-track"
+                                    value={84}
+                                    aria-label="Commercial: 84% of syllabi"
+                                >
+                                    <Progress.Indicator className="seg-fill seg-you" style={{ width: "84%" }}>
+                                        <span className="seg-you">84%</span>
+                                    </Progress.Indicator>
+                                </Progress.Root>
+                            </div>
                             <div className="row-meta"><span className="trend down">↓ 2pts</span></div>
                         </div>
+
                         <div className="chart-row">
                             <div className="row-label">Value Collection</div>
-                            <div className="bar-wrap"><div className="bar-track"><div className="seg seg-slate" style={{ width: "9%" }}><span>9%</span></div><div className="seg seg-none" style={{ width: "91%" }}></div></div></div>
+                            <div className="bar-wrap">
+                                <Progress.Root
+                                    className="bar-track"
+                                    value={9}
+                                    aria-label="Value Collection: 9% of syllabi"
+                                >
+                                    <Progress.Indicator className="seg-fill seg-slate" style={{ width: "9%" }}>
+                                        <span className="seg-you-bus">9%</span>
+                                    </Progress.Indicator>
+                                </Progress.Root>
+                            </div>
                             <div className="row-meta"><span className="trend up">↑ 2pts</span></div>
                         </div>
+
                         <div className="chart-row">
                             <div className="row-label">Open/OER</div>
-                            <div className="bar-wrap"><div className="bar-track"><div className="seg seg-oer" style={{ width: "2%" }}></div><div className="seg seg-none" style={{ width: "98%" }}></div></div></div>
-                            <div className="row-meta"><span className="trend flat">flat</span><span className="sections-ct">2%</span></div>
+                            <div className="bar-wrap">
+                                <Progress.Root
+                                    className="bar-track"
+                                    value={2}
+                                    aria-label="Open/OER: 2% of syllabi"
+                                >
+                                    <Progress.Indicator className="seg-fill seg-oer" style={{ width: "2%" }} />
+                                </Progress.Root>
+                            </div>
+                            <div className="row-meta">
+                                <span className="trend flat">flat</span>
+                                <span className="sections-ct">2%</span>
+                            </div>
                         </div>
+
                         <div className="chart-row">
                             <div className="row-label">Custom / other</div>
-                            <div className="bar-wrap"><div className="bar-track"><div className="seg seg-comp" style={{ width: "5%" }}></div><div className="seg seg-none" style={{ width: "95%" }}></div></div></div>
-                            <div className="row-meta"><span className="trend flat">flat</span><span className="sections-ct">5%</span></div>
+                            <div className="bar-wrap">
+                                <Progress.Root
+                                    className="bar-track"
+                                    value={5}
+                                    aria-label="Custom / other: 5% of syllabi"
+                                >
+                                <Progress.Indicator className="seg-fill seg-comp" style={{ width: "5%" }} />
+                                </Progress.Root>
+                            </div>
+                            <div className="row-meta">
+                                <span className="trend flat">flat</span>
+                                <span className="sections-ct">5%</span>
+                            </div>
                         </div>
                     </div>
                     <div className="disclosure ">
