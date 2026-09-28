@@ -2,34 +2,33 @@
   --navy: #12224d;
   --accent-purple: #6d5fd8;
   --accent-purple-bg: #ece9fb;
-  --surface-0: #F4F5F7;
+  --surface-0: #f4f5f7;
   --surface-2: #ffffff;
   --text-primary: #1a1d29;
   --text-secondary: #6b7280;
   --bg-app: #f6f7f9;
   --bg-sidebar: #ffffff;
   --badge-bg: #7a4a2e;
-  --text-muted: #9CA3AF;
-  --cyan: #009EC2;
-  --orange: #F58426;
-  --surface-1: #ECEEF2;
+  --text-muted: #9ca3af;
+  --cyan: #009ec2;
+  --orange: #f58426;
+  --surface-1: #eceef2;
   --surface-2: #ffffff;
   --border: rgba(0, 0, 0, 0.08);
   --radius: 6px;
-  --you-healthy: #1B2A4A;
-  --you-risk: #5B7BAF;
-  --paid: #D1D5DB;
-  --oer: #6EE7C0;
-  --oer-text: #065F46;
+  --you-healthy: #1b2a4a;
+  --you-risk: #5b7baf;
+  --paid: #d1d5db;
+  --oer: #6ee7c0;
+  --oer-text: #065f46;
   --paid-text: #374151;
-  --risk-text: #991B1B;
-  --risk-background:#FEE2E2;
-  --risk-med-background:#FEF3C7;
-  --risk-med-text:#92400E;
-  --red-down: #DC2626;
+  --risk-text: #991b1b;
+  --risk-background: #fee2e2;
+  --risk-med-background: #fef3c7;
+  --risk-med-text: #92400e;
+  --red-down: #dc2626;
   --green-up: #059669;
-  --oer-background:#D1FAE5;
-  
+  --oer-background: #d1fae5;
 }
 
 *,
@@ -96,5 +95,4 @@ body {
     padding: 22px 18px 48px;
     overflow-y: visible;
   }
-
 }

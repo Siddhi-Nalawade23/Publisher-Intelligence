@@ -9,17 +9,17 @@ interface SidebarProps {
 }
 
 export default function Sidebar() {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
 
-  const activeId = location.pathname === "/" ? "field" : location.pathname.slice(1);
+  const activeId =
+    location.pathname === "/" ? "field" : location.pathname.slice(1);
 
   const currentFilters = SCOPE_FILTERS[activeId] ?? [];
 
   const handleSelect = (id: string) => {
     navigate(id === "field" ? "/" : `/${id}`);
   };
-
 
   return (
     <aside className="sidebar">
@@ -61,7 +61,14 @@ export default function Sidebar() {
       ))}
 
       <div className="sidebar-footer">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
           <circle cx="12" cy="12" r="9" />
           <path d="M12 16v-4" />
           <path d="M12 8h.01" />
