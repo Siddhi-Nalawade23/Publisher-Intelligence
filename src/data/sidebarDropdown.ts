@@ -6,10 +6,30 @@ export interface NavItem {
   icon: IconName;
 }
 export const NAV_ITEMS: NavItem[] = [
-  { id: "field", title: "Field", subtitle: "Reps & sales leaders", icon: "field" },
-  { id: "strategic", title: "Strategic", subtitle: "CEO, strategy, corp dev", icon: "strategic" },
-  { id: "business", title: "Business", subtitle: "CFO, finance, pricing", icon: "business" },
-  { id: "editorial", title: "Editorial", subtitle: "Editorial & content strategy", icon: "editorial" },
+  {
+    id: "field",
+    title: "Field",
+    subtitle: "Reps & sales leaders",
+    icon: "field",
+  },
+  {
+    id: "strategic",
+    title: "Strategic",
+    subtitle: "CEO, strategy, corp dev",
+    icon: "strategic",
+  },
+  {
+    id: "business",
+    title: "Business",
+    subtitle: "CFO, finance, pricing",
+    icon: "business",
+  },
+  {
+    id: "editorial",
+    title: "Editorial",
+    subtitle: "Editorial & content strategy",
+    icon: "editorial",
+  },
 ];
 export interface FilterField {
   label: string;
@@ -20,12 +40,25 @@ export const SCOPE_FILTERS: Record<string, FilterField[]> = {
   field: [
     {
       label: "INSTITUTION",
-      options: ["All institutions", "Iowa State", "UC Davis", "Ohio State", "Georgia State", "Arizona State"],
+      options: [
+        "All institutions",
+        "Iowa State",
+        "UC Davis",
+        "Ohio State",
+        "Georgia State",
+        "Arizona State",
+      ],
       defaultValue: "All institutions",
     },
     {
       label: "SUBJECT / DISCIPLINE",
-      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      options: [
+        "All disciplines",
+        "Economics",
+        "Biology",
+        "Nursing",
+        "Psychology",
+      ],
       defaultValue: "All disciplines",
     },
     {
@@ -42,12 +75,23 @@ export const SCOPE_FILTERS: Record<string, FilterField[]> = {
   strategic: [
     {
       label: "INSTITUTION TYPE",
-      options: ["All institution types", "R1 universities", "Community colleges", "Regional 4-year"],
+      options: [
+        "All institution types",
+        "R1 universities",
+        "Community colleges",
+        "Regional 4-year",
+      ],
       defaultValue: "All institution types",
     },
     {
       label: "SUBJECT / DISCIPLINE",
-      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      options: [
+        "All disciplines",
+        "Economics",
+        "Biology",
+        "Nursing",
+        "Psychology",
+      ],
       defaultValue: "All disciplines",
     },
     {
@@ -69,7 +113,13 @@ export const SCOPE_FILTERS: Record<string, FilterField[]> = {
     },
     {
       label: "SUBJECT / DISCIPLINE",
-      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      options: [
+        "All disciplines",
+        "Economics",
+        "Biology",
+        "Nursing",
+        "Psychology",
+      ],
       defaultValue: "All disciplines",
     },
     {
@@ -91,7 +141,13 @@ export const SCOPE_FILTERS: Record<string, FilterField[]> = {
     },
     {
       label: "SUBJECT / DISCIPLINE",
-      options: ["All disciplines", "Economics", "Biology", "Nursing", "Psychology"],
+      options: [
+        "All disciplines",
+        "Economics",
+        "Biology",
+        "Nursing",
+        "Psychology",
+      ],
       defaultValue: "All disciplines",
     },
     {
@@ -105,4 +161,4 @@ export const SCOPE_FILTERS: Record<string, FilterField[]> = {
       defaultValue: "All courses",
     },
   ],
-}
+};

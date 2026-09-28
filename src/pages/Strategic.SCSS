@@ -1,70 +1,86 @@
 .kpi-row-three {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 
-    >.card {
-        min-width: 0;
-    }
+  > .card {
+    min-width: 0;
+  }
 }
 
 @media (max-width: 1080px) {
-    .split {
-        grid-template-columns: 1fr;
-    }
+  .split {
+    grid-template-columns: 1fr;
+  }
 }
 
 .seg-you {
-    background: var(--navy);
-    color: rgba(255, 255, 255, 0.92);
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  font-size: 12px;
+  padding: 0.3%;
 }
+
+.seg-you-bus {
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  font-size: 12px;
+  padding: 0.3%;
+}
+
 .flag.watch {
-    background: var(--risk-background);
-    color: var(--risk-text);
+  background: var(--risk-background);
+  color: var(--risk-text);
 }
+
 .flag {
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 20px;
-    white-space: nowrap;
-    font-weight: 600;
-    
-}.flag.neutral {
-    background: #F3F4F6;
-    color: var(--text-secondary);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.flag.neutral {
+  background: #f3f4f6;
+  color: var(--text-secondary);
 }
 
 .flag.gap {
-    background: var(--risk-med-background);
-    color: var(--risk-med-text);
+  background: var(--risk-med-background);
+  color: var(--risk-med-text);
 }
+
 .trend.down {
-    color: var(--red-down);
-    font-weight: 600;
+  color: var(--red-down);
+  font-weight: 600;
 }
+
 .trend.up {
-    color: var(--green-up);
-    font-weight: 600;
+  color: var(--green-up);
+  font-weight: 600;
 }
+
 .flag.neutral {
-    background: #F3F4F6;
-    color: #4B5563;
+  background: #f3f4f6;
+  color: #4b5563;
 }
 
 .disclosure {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-top: 14px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    line-height: 1.6;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  line-height: 1.6;
 }
 
 .bench-rail {

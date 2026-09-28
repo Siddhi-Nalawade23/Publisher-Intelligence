@@ -4,15 +4,13 @@ interface HeaderProps {
   badgeLabel: string;
   userInitials: string;
 }
-import "./Header.css"
+import "./Header.css";
 export default function Header({
   productName,
   subtitle,
   badgeLabel,
   userInitials,
-}: HeaderProps) 
-
-{
+}: HeaderProps) {
   return (
     <header className="header">
       <div className="header-left">
