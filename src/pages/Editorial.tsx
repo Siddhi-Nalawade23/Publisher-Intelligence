@@ -11,10 +11,10 @@ function Editorial() {
                     Bucket 4 of 4 · Editorial intelligence
                 </div>
                 <div className="page-title">
-                    What's actually read{" "}
+                    What's actually read
                     <span className="persona-chip">
                         Editorial &amp; content strategy
-                    </span>{" "}
+                    </span>
                 </div>
                 <div className="page-sub">
                     Content in use, at chapter and page level, set against what the
