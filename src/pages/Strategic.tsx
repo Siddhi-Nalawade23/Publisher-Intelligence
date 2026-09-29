@@ -4,12 +4,15 @@ import * as Progress from "@radix-ui/react-progress";
 function Strategic() {
   return (
     <div>
-      <div className="container">
+      <div className="field-page">
         <div className="page-header">
           <div className="page-eyebrow">
             Bucket 2 of 4 · Strategic intelligence
           </div>
-          <div className="page-title">You are here </div>
+          <div className="page-title">
+            You are here
+            <span className="persona-chip">CEO, strategy, corp dev</span>
+          </div>
           <div className="page-sub">
             Where the market is moving and where this publisher sits in it. This
             bucket reports position and trend — it deliberately stops short of

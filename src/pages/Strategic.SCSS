@@ -14,7 +14,10 @@
     min-width: 0;
   }
 }
-
+.fresh.term {
+    background: var(--surface-1);
+    color: var(--paid-text);
+}
 @media (max-width: 1080px) {
   .split {
     grid-template-columns: 1fr;
