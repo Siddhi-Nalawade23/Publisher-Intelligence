@@ -10,7 +10,10 @@ function Field() {
       <div>
         <div className="page-header">
           <div className="page-eyebrow">Bucket 1 of 4 · Field intelligence</div>
-          <div className="page-title">What's moving this term</div>
+          <div className="page-title">
+            What's moving this term
+            <span className="persona-chip">Reps &amp; sales leaders</span>
+          </div>
           <div className="page-sub">
             The live competitive picture for the people carrying a bag: which
             adoptions are being won, which are slipping, and — the part we can't

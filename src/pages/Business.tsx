@@ -7,7 +7,9 @@ function Business() {
         <div className="page-eyebrow">
           Bucket 3 of 4 · Business intelligence
         </div>
-        <div className="page-title">The money</div>
+        <div className="page-title">
+          The money <span className="persona-chip">CFO, finance, pricing</span>
+        </div>
         <div className="page-sub">
           Revenue direction and anonymised comparative pricing, cut by
           discipline. This is the pricing view from the QBR deck, made routine

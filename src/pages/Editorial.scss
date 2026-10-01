@@ -1,0 +1,14 @@
+.chart-area {
+  margin-top: 0px;
+}
+.fresh.near {
+    background: var(--oer-background);
+    color: var(--oer-text);
+}
+.fresh::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}

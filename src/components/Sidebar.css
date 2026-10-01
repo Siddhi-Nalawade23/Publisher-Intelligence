@@ -41,12 +41,13 @@
   gap: 8px;
   padding: 8px 14px;
   cursor: pointer;
-  border-left: 3px solid transparent;
+  
 }
 
 .nav-item.active {
   background: var(--bg-app);
   font-weight: 600;
+  border-right: 2px solid var(--cyan);
 }
 
 .nav-item:not(.active):hover {
